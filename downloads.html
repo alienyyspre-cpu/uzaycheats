@@ -101,7 +101,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:#
 <p>Windows Defender'ı tamamen kapatmanızı sağlayan gelişmiş kontrol aracı, müdahalesiz oyun deneyimi sunar.</p>
 <div class="version">Sürüm: v2.1</div>
 <div class="meta"><span>📅 10.08.2026</span><span>📦 8.9 MB</span></div>
-<a href="#" class="btn btn-download" onclick="downloadFile('Uzayhup_Defender_Control2.1_(2).rar')">🛡️ Defender Kapatıcı İndir</a>
+<a href="#" class="btn btn-download" onclick="downloadFile('Uzayhup Defender Control2.1 (2).rar')">🛡️ Defender Kapatıcı İndir</a>
 </div>
 
 </div>
@@ -124,8 +124,9 @@ Daima güvenilir kaynaklardan indirme yap ve dosyaları çalıştırmadan önce 
 <script>
 function downloadFile(filename) {
     // ★★★ GERÇEK DOSYA İNDİRME ★★★
-    // Dosyalar sunucuda aynı klasörde olmalı
-    window.location.href = filename;
+    // Dosya adını URL encode et (boşluk ve özel karakterler için)
+    const encodedFilename = encodeURIComponent(filename);
+    window.location.href = encodedFilename;
 }
 </script>
 </body>
