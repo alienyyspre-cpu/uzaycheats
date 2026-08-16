@@ -123,22 +123,9 @@ Daima güvenilir kaynaklardan indirme yap ve dosyaları çalıştırmadan önce 
 
 <script>
 function downloadFile(filename) {
-    // ★★★ GERÇEK DOSYA İNDİRMEK İÇİN (dosyalar sunucuda olmalı):
-    // window.location.href = filename;
-    // return;
-
-    // ----- DEMO MODU -----
-    alert(`"${filename}" dosyası indiriliyor... (Demo)\n\nGerçek dosya için downloadFile() fonksiyonunu düzenleyin.`);
-    const content = `Bu, ${filename} dosyasının demo içeriğidir.\nGerçek uygulama için dosyayı sunucuya yükleyin.`;
-    const blob = new Blob([content], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    // ★★★ GERÇEK DOSYA İNDİRME ★★★
+    // Dosyalar sunucuda aynı klasörde olmalı
+    window.location.href = filename;
 }
 </script>
 </body>
